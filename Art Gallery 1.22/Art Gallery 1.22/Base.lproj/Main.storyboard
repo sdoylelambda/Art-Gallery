@@ -22,15 +22,46 @@
                                 <rect key="frame" x="20" y="116" width="335" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XE2-pI-FSe" customClass="PaintingTableViewCell" customModule="Art_Gallery_1_22" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="362" id="XE2-pI-FSe" customClass="PaintingTableViewCell" customModule="Art_Gallery_1_22" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="362"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XE2-pI-FSe" id="4qg-VM-8fO">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="361.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SZ0-AD-UzH">
+                                                    <rect key="frame" x="35" y="11" width="265" height="340"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-fM-Njc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="256"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kw-N0-o3B">
+                                                            <rect key="frame" x="0.0" y="276" width="265" height="64"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="buttonAction:" destination="XE2-pI-FSe" eventType="touchUpInside" id="ef0-zp-Bt0"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SZ0-AD-UzH" firstAttribute="top" secondItem="4qg-VM-8fO" secondAttribute="topMargin" id="4hw-cL-l8w"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SZ0-AD-UzH" secondAttribute="trailing" constant="20" id="Imh-Ua-rWo"/>
+                                                <constraint firstItem="SZ0-AD-UzH" firstAttribute="leading" secondItem="4qg-VM-8fO" secondAttribute="leadingMargin" constant="20" id="KuH-mt-ox8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SZ0-AD-UzH" secondAttribute="bottom" id="Ye6-16-ATS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonOutlet" destination="0kw-N0-o3B" id="8Yr-SD-3ZN"/>
+                                            <outlet property="paintingImageView" destination="lhq-fM-Njc" id="ByN-0G-CYM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="DeR-F0-yHK" id="OeI-no-7qt"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +79,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="DeR-F0-yHK" userLabel="PaintingModel" customClass="PaintingModel" customModule="Art_Gallery_1_22" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="26.53673163418291"/>
         </scene>

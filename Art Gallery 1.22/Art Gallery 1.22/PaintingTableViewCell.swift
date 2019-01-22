@@ -1,16 +1,12 @@
 import UIKit
 
 class PaintingTableViewCell: UITableViewCell {
+    
+    static let reuseIdentifier = "cell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var paintingImageView: UIImageView!
+    @IBOutlet weak var buttonOutlet: UIButton!
+
+    @IBAction func buttonAction(_ sender: Any) {
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

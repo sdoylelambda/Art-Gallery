@@ -4,25 +4,29 @@ import UIKit
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        
     }
     
     
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
+        painting?.isLiked.toggle()
+      //  UIButton.text = "like"
     }
     
     weak var tableView: PaintingViewController?
+    
+    var painting: Painting?
     
     var paintings: [Painting] = []
     
     override init() {
         for painting in 1 ... 12 {
-            let pic = "image"
+            let pic = "Image\(painting)"
+            return pic
         }
     }
     

@@ -3,6 +3,8 @@ import UIKit
 
 class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDelegate {
     
+    
+    
     weak var tableView: UITableView?
     
     var painting: Painting?
@@ -17,6 +19,8 @@ class PaintingModel: NSObject, UITableViewDataSource, PaintingTableViewCellDeleg
             paintings.append(painting)
         }
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintings.count

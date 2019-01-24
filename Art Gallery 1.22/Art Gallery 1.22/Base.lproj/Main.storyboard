@@ -29,14 +29,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="361.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SZ0-AD-UzH">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SZ0-AD-UzH">
                                                     <rect key="frame" x="35" y="11" width="265" height="340"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-fM-Njc">
                                                             <rect key="frame" x="0.0" y="0.0" width="265" height="256"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kw-N0-o3B">
-                                                            <rect key="frame" x="0.0" y="276" width="265" height="64"/>
+                                                            <rect key="frame" x="0.0" y="264" width="265" height="76"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="Button"/>
                                                             <connections>
@@ -60,6 +60,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
+                                    <outlet property="dataSource" destination="DeR-F0-yHK" id="CaY-Yl-vOI"/>
                                     <outlet property="delegate" destination="DeR-F0-yHK" id="OeI-no-7qt"/>
                                 </connections>
                             </tableView>
